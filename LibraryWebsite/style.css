@@ -1,0 +1,298 @@
+/* Gloabal code applies to all elements */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    color: black;
+}
+
+/* CONTAINER that holds all content */
+.container {
+    width: 100%;
+    color: black;
+}
+
+/* NAVBAR styling*/
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between; /* FIXED */
+    align-items: center;
+    padding: 0 30px;
+    height: 90px;
+    background-color: black;
+    color:white;
+}
+/* lOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 30px;
+}
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/* Book CONTENT */
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;     /* centers the grid itself */
+    justify-items: center;       /* centers items inside each grid cell */
+    gap: 40px;
+    margin: 90px auto auto auto;
+    padding: 20px;
+    color: white;
+}
+
+/* BOOK CARD */
+.books {
+    display: flex;
+    align-items: center; /* FIXED */
+    justify-content: center;
+    gap: 15px;
+    width: 80%;
+    max-width: none;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* IMAGE */
+.books img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* TEXT */
+.book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+/* Book title and description */
+.heading {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* BUTTON that helps user to buy books*/
+.buy-btn {
+    margin-left: auto; /* PUSH RIGHT */
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.buy-btn a {
+    text-decoration: none;
+}
+.buy-btn:hover {
+    background-color: darkgreen;
+}
+/* Payment Page styling */
+.payment {
+   padding: 20px;
+   margin: 10px 0;  
+}
+.payment-method {
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    flex-direction: row;      
+    margin: 20px 0;
+    flex-wrap: nowrap;    
+    gap: 40px;
+}
+.payment-title {
+    font-size: 15px;
+}
+.payment-icons {
+    font-size: 40px;
+    gap: 10px;
+}
+/* Brand Colors */
+.fa-cc-visa {
+    color: #1A1F71;       /* Visa blue */
+}
+
+.fa-cc-mastercard {
+    color: #EB001B;       /* Mastercard red */
+}
+
+.fa-cc-amex {
+    color: #2E77BC;       /* American Express blue */
+}
+
+.fa-cc-paypal {
+    color: #003087;       /* PayPal blue */
+}
+/* ===== FORM STYLING ===== */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(232, 195, 195);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+}
+.payment-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+.payment-form select,
+.payment-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.digit {
+    display: block;
+    width: 50%;
+}
+.payment-form input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+.form-row {
+    display: flex;
+    gap: 10px;
+    border: none;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.continue-btn {
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.continue-btn:hover {
+    background-color: #218838;
+}
+
+.continue-btn:active {
+    transform: scale(0.98);
+}
+/* Success page styling*/
+.final {
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(232, 195, 195);
+    border-radius: 10px;
+    width: 60%;
+}
+/*Responsive design for  MOBILE */
+@media screen and (max-width: 750px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%; 
+        flex-direction: column;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        background-color: black; 
+        padding: 20px 0;
+        gap: 40px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+    .content {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+    .books {
+        width: 100%; /* 1 per row */
+    }
+    .payment-form {
+        width: 80%;
+    }
+    .final {
+        width: 100%;
+    }
+}
